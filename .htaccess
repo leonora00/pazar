@@ -1,0 +1,11 @@
+RewriteEngine On 
+RewriteBase /pazar/
+
+ErrorDocument 404 /404.php
+
+RewriteCond %{THE_REQUEST} \s/+/(.+?)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)$ index.php?page=$1 [L,QSA]
