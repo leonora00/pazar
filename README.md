@@ -23,6 +23,7 @@
 4. **Update DB credentials(if needed)**
 
 In your PHP files (likely `app/config/config.php` or similar)
+
 5. **Start XAMPP**
 6. Run the app
 - Open your browser and go to `http://localhost/pazar`
